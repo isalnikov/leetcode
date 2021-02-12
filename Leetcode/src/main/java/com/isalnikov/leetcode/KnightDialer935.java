@@ -38,15 +38,13 @@ public class KnightDialer935 {
         for (int i = 0; i < N - 1; ++i) {
             long[] tmp = new long[10];
 
-            // For each digit
+            
             for (int j = 0; j < 10; j++) {
-                // Which other digits can we reach?
+                
                 for (int k : jump.get(i)) {
                     tmp[j] = (tmp[j] + a[k]) % MOD;
                 }
             }
-
-            // Sanity checks based on symmetry of the keypad
             assert tmp[1] == tmp[3];
             assert tmp[4] == tmp[6];
             assert tmp[7] == tmp[9];
