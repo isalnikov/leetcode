@@ -1,7 +1,5 @@
 package com.isalnikov.leetcode;
 
-import java.util.StringJoiner;
-
 /**
  * https://leetcode.com/problems/add-two-numbers/
  * https://javarush.ru/groups/posts/2779-reverse-string-v-java-uchimsja-reversirovatjh-stroki-raznihmi-sposobami
