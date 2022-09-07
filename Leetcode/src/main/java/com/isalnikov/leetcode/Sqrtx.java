@@ -18,6 +18,14 @@ public class Sqrtx {
         int i = 2147483647;
          i  = 0x5f3759df - ( i >> 1 );
         System.out.println(i);
+        
+        
+        for (int j = 0; j < 100; j++) {
+            System.out.println(j +" = "+ ( 2<<j));
+            System.out.println(j +" = "+ ( j*j));
+            
+        }
+        
     }
 
     public static class Solution {
