@@ -21,8 +21,8 @@ public class Sqrtx {
         
         
         for (int j = 0; j < 100; j++) {
-            System.out.println(j +" = "+ ( 2<<j));
-            System.out.println(j +" = "+ ( j*j));
+            System.out.println(j +" << "+ ( 2<<j)  + "  ==  " + (Integer.toBinaryString(2<<j)));
+            System.out.println(j +" ^ "+ ( j*j) + "  ==  " + (Integer.toBinaryString(j*j)));
             
         }
         
