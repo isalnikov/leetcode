@@ -15,8 +15,9 @@ public class NewMain {
 
     public static void main(String[] args) throws IOException {
         LocalDate he = LocalDate.of(1982, 12, 16);
-        LocalDate she = LocalDate.of(1992, 12, 16);
+        LocalDate she = LocalDate.of(1982, 12, 16).plusYears(10);
         LocalDate now = LocalDate.now().minusYears(18);
+        LocalDate today = LocalDate.now();
         System.out.println(he);
         System.out.println(now);
        DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -30,10 +31,11 @@ public class NewMain {
             Document doc = Jsoup.connect(s).get(); //document.ge
             String val = doc.select("div.sovmestimost-po-date-rozhdeniya-amount-number").text().replaceAll("%", "").split(" ")[0];
             String val1 = doc.select("div.sovmestimost-po-date-rozhdeniya-amount-number").text().replaceAll("%", "").split(" ")[1];
-            if(Integer.parseInt(val)>95 && Integer.parseInt(val1)>95)
-               System.out.println(doc.select("div.sovmestimost-po-date-rozhdeniya-amount-number").text() + "" + she) ;
+            if(Integer.parseInt(val)>95 && Integer.parseInt(val1)>92)
+               System.out.println(doc.select("div.sovmestimost-po-date-rozhdeniya-amount-number").text() + " " + she  + " " + (today.getYear() - she.getYear()) +" yo") ;
 
         }
+        System.out.println("!!!");
 
     }
 
